@@ -15,7 +15,6 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 	return (left_height - right_height);
 }
-
 /**
  * binary_tree_height - function that measures the height of a binary tree
  * @tree: pointer to the root node
@@ -27,16 +26,13 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	size_t height_right = 0;
 
 	if (tree == NULL)
-	{
 		return (0);
-	}
-		height_left = 1 + binary_tree_height(tree->left);
-		height_right = 1 + binary_tree_height(tree->right);
+
+	height_left = 1 + binary_tree_height(tree->left);
+	height_right = 1 + binary_tree_height(tree->right);
 
 	if (height_left >= height_right)
-	{
 		return (height_left);
-	}
 
 	return (height_right);
 }
